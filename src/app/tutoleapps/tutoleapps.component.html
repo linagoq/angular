@@ -1,0 +1,14 @@
+<h2>My Tutoleapps</h2>
+<ul class="tutoleapps">
+    <li *ngFor="let tutoleapp of tutoleapps" (click)="onSelect(tutoleapp)">
+        <span class="badge">{{tutoleapp.id}}</span> {{tutoleapp.name}}
+    </li>
+</ul>
+
+<h2>{{selectedTutoleapp.name | uppercase}} Details</h2>
+<div><span>id: </span>{{tutoleapp.id}}</div>
+<div>
+    <label>name:
+    <input [(ngModel)]="tutoleapp.name" placeholder="Nombre">
+  </label>
+</div>
